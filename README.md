@@ -11,18 +11,18 @@
 
 # Usage
 ### Build Z3
-'''
+```
 git clone https://github.com/Z3Prover/z3.git
 cd z3
 python scripts/mk_make.py
 cd build
 make
 sudo make install
-'''
+```
 
 ### Inference
 example:
-'''
+```
 cd path/to/z3/build/
 $ z3 -smt2 path/to/4-Queens.txt
-'''
+```
