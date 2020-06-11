@@ -26,3 +26,6 @@ example:
 cd path/to/z3/build/
 $ z3 -smt2 path/to/4-Queens.txt
 ```
+
+### Example Result
+![](img1.png)
