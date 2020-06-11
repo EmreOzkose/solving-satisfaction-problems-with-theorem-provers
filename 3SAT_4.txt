@@ -1,0 +1,24 @@
+(set-logic QF_LIA)
+
+(echo "(-A and B and -C) and (S or C or W) and (W or A)")
+
+(declare-const A Bool)
+(declare-const B Bool)
+(declare-const C Bool)
+(declare-const S Bool)
+(declare-const W Bool)
+
+(define-fun satproblem () Bool
+    (and
+    (and (not A) B (not C))
+    (or S C W)
+    (or W A)
+    )
+)
+
+(assert 
+    satproblem
+)
+
+(check-sat)
+(get-model)

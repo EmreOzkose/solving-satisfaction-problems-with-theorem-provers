@@ -1,0 +1,25 @@
+(set-logic QF_LIA)
+
+(echo "(P ^ Q ^ -R) V -(R V -S) V (G ^ -F)")
+
+(declare-const P Bool)
+(declare-const Q Bool)
+(declare-const R Bool)
+(declare-const S Bool)
+(declare-const G Bool)
+(declare-const F Bool)
+
+(define-fun satproblem () Bool
+    (or
+    (and P Q (not R))
+    (not (or R (not S)))
+    (and G (not F))
+    )
+)
+
+(assert 
+    satproblem
+)
+
+(check-sat)
+(get-model)
