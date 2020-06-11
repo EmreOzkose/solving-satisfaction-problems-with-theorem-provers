@@ -8,3 +8,21 @@
 - 4 queens problem solution is given in  4-Queens.txt
 - 8 queens problem solution is given in  8-Queens.txt
 - A trick for finding all solutions in n-queens problem is given in N-Queens-all.txt
+
+Usage
+### Build Z3
+'''
+git clone https://github.com/Z3Prover/z3.git
+cd z3
+python scripts/mk_make.py
+cd build
+make
+sudo make install
+'''
+
+### Inference
+example:
+'''
+cd path/to/z3/build/
+$ z3 -smt2 path/to/4-Queens.txt
+'''
